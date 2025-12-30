@@ -8,6 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const PORT = process.env.PORT || 4000;
+
 async function init() {
   for (let m of messages) {
     m.embedding = await getEmbedding(m.text);
