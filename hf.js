@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-const HF_API = "https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2";
+const HF_API = process.env.HF_ENV_API;
 const HF_KEY = process.env.HF_API_KEY;
 
 export async function getEmbedding(text) {
